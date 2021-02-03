@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+
+
+{{range $key,$value:=. }}
+    <div>
+        <h1>{{ $key }}</h1>
+        <h5>PeersStatusSIP:</h5>
+        <pre>{{ index $value "PeerStatusSIP"}}</pre>
+        <h5>PeersStatusH323:</h5>
+        <pre>{{ index $value "PeerStatusH323"}}</pre>
+        <h5>RegisterStatus:</h5>
+        <pre>{{ index $value "RegisterStatus"}}</pre>
+    </div>
+{{end}}
+
+</body>
+</html>
